@@ -95,5 +95,4 @@ getById(id: number): Book | undefined {
     return this.books.find(book => book.id === id)
 }
 
-
 }
