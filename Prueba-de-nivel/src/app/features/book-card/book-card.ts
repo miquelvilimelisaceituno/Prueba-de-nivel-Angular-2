@@ -1,4 +1,4 @@
-import { Component, input, output } from '@angular/core';
+import { Component, input, output, ChangeDetectionStrategy } from '@angular/core';
 import { Book } from '../../core/model/book.model';
 import { CurrencyPipe } from '@angular/common';
 
@@ -7,8 +7,9 @@ import { CurrencyPipe } from '@angular/common';
   selector: 'app-book-card',
   styleUrl: './book-card.css',
   templateUrl: './book-card.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BookCard {
-  readonly book =  input.required<Book>();
+  readonly book = input.required<Book>();
   readonly bookSelected = output<Book>();
 }

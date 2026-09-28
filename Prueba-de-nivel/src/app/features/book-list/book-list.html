@@ -1,3 +1,3 @@
-@for (book of books(); track book.id){
-    <app-book-card [book]="book" (bookSelected)="onBookSelected($event)"> </app-book-card>
+@for (book of books(); track book.id) {
+  <app-book-card [book]="book" (bookSelected)="onBookSelected($event)"> </app-book-card>
 }
